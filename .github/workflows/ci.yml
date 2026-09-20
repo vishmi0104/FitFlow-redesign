@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files exist
+        run: |
+          test -f README.md
+          test -f docs/tech-stack-summary.md
+          test -f docs/comparison-matrix.md
+          test -f docs/adr/ADR-001-tech-stack.md
+
+  ai-service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: cd ai-service && pip install -r requirements.txt
+      - run: python -m py_compile ai-service/app/main.py
