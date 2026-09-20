@@ -43,4 +43,4 @@ FitFlow must deliver one consistent product across **iOS, Android and web**, inc
 
 - [Comparison Matrix](comparison-matrix.md)
 - [ADR-001](adr/ADR-001-tech-stack.md)
-- [Architecture diagram](diagrams/architecture-diagram.png)
+- [Architecture diagram](diagrams/architecture-diagram.svg)

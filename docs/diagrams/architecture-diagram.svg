@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3b6ea5"/></marker></defs>
+<style>
+.b{fill:#fff;stroke:#333;stroke-width:1.2}
+.t{font-size:12px;font-weight:bold;text-anchor:middle;fill:#222}
+.s{font-size:10px;text-anchor:middle;fill:#666}
+.l{font-size:13px;font-weight:bold;fill:#1f3a5f}
+.p1{fill:#dbe7f5;stroke:#4a7ab5}.p2{fill:#dcefd9;stroke:#6aa56a}.p3{fill:#fdf1cc;stroke:#d4a72c}
+.p4{fill:#f0dbe8;stroke:#b56a9b}.p5{fill:#fbe3cc;stroke:#d98a4a}.p6{fill:#e8e8e8;stroke:#888}
+line{stroke:#3b6ea5;stroke-width:1.6}
+</style>
+<rect width="900" height="700" fill="#fff"/>
+<text x="450" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f3a5f">FitFlow: High-Level System Architecture</text>
+<rect class="p1" x="20" y="50" width="860" height="95" rx="10"/><text class="l" x="36" y="72">1. CLIENT LAYER: React Native (iOS / Android) + React Native Web</text>
+<rect class="b" x="36" y="85" width="190" height="48" rx="8"/><text class="t" x="131.0" y="107.0">Mobile App</text><text class="s" x="131.0" y="122.0">iOS / Android</text>
+<rect class="b" x="246" y="85" width="190" height="48" rx="8"/><text class="t" x="341.0" y="107.0">Web App</text><text class="s" x="341.0" y="122.0">React Native Web</text>
+<rect class="b" x="456" y="85" width="190" height="48" rx="8"/><text class="t" x="551.0" y="107.0">Trainer Dashboard</text><text class="s" x="551.0" y="122.0">Review / adjust plans</text>
+<rect class="b" x="666" y="85" width="190" height="48" rx="8"/><text class="t" x="761.0" y="107.0">Wearable Sync</text><text class="s" x="761.0" y="122.0">HealthKit / Google Fit</text>
+<line x1="131" y1="145" x2="131" y2="175" marker-end="url(#a)"/>
+<line x1="341" y1="145" x2="341" y2="175" marker-end="url(#a)"/>
+<line x1="551" y1="145" x2="551" y2="175" marker-end="url(#a)"/>
+<line x1="761" y1="145" x2="761" y2="175" marker-end="url(#a)"/>
+<rect class="p2" x="20" y="175" width="860" height="95" rx="10"/><text class="l" x="36" y="197">2. API GATEWAY AND EDGE</text>
+<rect class="b" x="36" y="210" width="190" height="48" rx="8"/><text class="t" x="131.0" y="232.0">API Gateway</text><text class="s" x="131.0" y="247.0">REST + WebSocket</text>
+<rect class="b" x="246" y="210" width="190" height="48" rx="8"/><text class="t" x="341.0" y="238.0">Rate Limiting / WAF</text>
+<rect class="b" x="456" y="210" width="190" height="48" rx="8"/><text class="t" x="551.0" y="232.0">CDN</text><text class="s" x="551.0" y="247.0">media</text>
+<rect class="b" x="666" y="210" width="190" height="48" rx="8"/><text class="t" x="761.0" y="232.0">Auth0</text><text class="s" x="761.0" y="247.0">JWT / OAuth 2.1</text>
+<line x1="131" y1="270" x2="131" y2="300" marker-end="url(#a)"/>
+<line x1="341" y1="270" x2="341" y2="300" marker-end="url(#a)"/>
+<line x1="551" y1="270" x2="551" y2="300" marker-end="url(#a)"/>
+<line x1="761" y1="270" x2="761" y2="300" marker-end="url(#a)"/>
+<rect class="p3" x="20" y="300" width="860" height="155" rx="10"/><text class="l" x="36" y="322">3. APPLICATION SERVICES: NestJS (TypeScript)</text>
+<rect class="b" x="36" y="332" width="190" height="44" rx="8"/><text class="t" x="131.0" y="352.0">User and Profile</text><text class="s" x="131.0" y="367.0">Onboarding, goals</text>
+<rect class="b" x="246" y="332" width="190" height="44" rx="8"/><text class="t" x="341.0" y="352.0">Workout Service</text><text class="s" x="341.0" y="367.0">Plans, logging</text>
+<rect class="b" x="456" y="332" width="190" height="44" rx="8"/><text class="t" x="551.0" y="352.0">Nutrition Service</text><text class="s" x="551.0" y="367.0">Meal logging</text>
+<rect class="b" x="666" y="332" width="190" height="44" rx="8"/><text class="t" x="761.0" y="352.0">Social Service</text><text class="s" x="761.0" y="367.0">Feed, challenges</text>
+<rect class="b" x="36" y="390" width="190" height="44" rx="8"/><text class="t" x="131.0" y="416.0">Notification Svc</text>
+<rect class="b" x="246" y="390" width="190" height="44" rx="8"/><text class="t" x="341.0" y="416.0">Trainer Oversight Svc</text>
+<rect class="b" x="456" y="390" width="190" height="44" rx="8"/><text class="t" x="551.0" y="416.0">Progress / Analytics</text>
+<rect class="b" x="666" y="390" width="190" height="44" rx="8"/><text class="t" x="761.0" y="416.0">Realtime Gateway (WS)</text>
+<line x1="200" y1="455" x2="200" y2="490" marker-end="url(#a)"/>
+<line x1="660" y1="455" x2="660" y2="490" marker-end="url(#a)"/>
+<rect class="p4" x="20" y="490" width="410" height="105" rx="10"/><text class="l" x="36" y="512">4. AI MICROSERVICE: Python / FastAPI</text>
+<rect class="b" x="36" y="525" width="185" height="52" rx="8"/><text class="t" x="128.5" y="549.0">Plan Generator</text><text class="s" x="128.5" y="564.0">Personalised workouts</text>
+<rect class="b" x="236" y="525" width="185" height="52" rx="8"/><text class="t" x="328.5" y="549.0">Explainability</text><text class="s" x="328.5" y="564.0">Why this plan?</text>
+<rect class="p5" x="450" y="490" width="430" height="105" rx="10"/><text class="l" x="466" y="512">5. DATA AND CACHING LAYER</text>
+<rect class="b" x="466" y="525" width="128" height="52" rx="8"/><text class="t" x="530.0" y="549.0">PostgreSQL</text><text class="s" x="530.0" y="564.0">Core + health data</text>
+<rect class="b" x="606" y="525" width="128" height="52" rx="8"/><text class="t" x="670.0" y="549.0">Redis</text><text class="s" x="670.0" y="564.0">Cache / sessions</text>
+<rect class="b" x="746" y="525" width="128" height="52" rx="8"/><text class="t" x="810.0" y="549.0">S3</text><text class="s" x="810.0" y="564.0">Meal photos</text>
+<line x1="430" y1="551" x2="450" y2="551" marker-end="url(#a)" stroke-dasharray="4 3"/>
+<rect class="p6" x="20" y="615" width="860" height="65" rx="10"/><text class="l" x="36" y="637">6. CROSS-CUTTING CONCERNS</text>
+<text class="s" x="450" y="662" style="font-size:11px;fill:#333">Encryption at rest and in transit (TLS 1.3, AES-256) | GDPR consent and data export | Audit logging | CI/CD (GitHub Actions) | Monitoring and alerting</text>
+</svg>

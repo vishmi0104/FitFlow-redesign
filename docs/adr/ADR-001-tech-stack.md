@@ -46,4 +46,4 @@ Both are accepted as reasonable trade-offs. A performance-critical screen can dr
 
 - [Comparison Matrix](../comparison-matrix.md)
 - [Tech Stack Summary](../tech-stack-summary.md)
-- [Architecture diagram](../diagrams/architecture-diagram.png)
+- [Architecture diagram](../diagrams/architecture-diagram.svg)
