@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
-// Path එක කලින් හරි ගිය විදිහටම තියාගන්න (../constants/theme හෝ @/constants/theme)
+// Path එක කලින් හරි ගිය විදිහටම තියාගන්න
 import { Colors, Spacing } from '../constants/theme'; 
 
 // Onboarding පිටු වල තොරතුරු ලිස්ට් එකක් විදිහට
@@ -20,18 +20,17 @@ const onboardingData = [
   }
 ];
 
-export default function OnboardingScreen() {
-  const router = useRouter();
+export default function OnboardingScreen({ onGetStarted }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Next Button එක click කළාම වෙන දේ
   const handleNext = () => {
     if (currentIndex < onboardingData.length - 1) {
-      // ඊළඟ පිටුවට යන්න
       setCurrentIndex(currentIndex + 1);
     } else {
-      // අන්තිම පිටුවේ නම්, Auth (Login) එකට යන්න
-      router.push('/auth');
+      // Get Started එබුවාම index.tsx එකට කියනවා Auth එක පෙන්වන්න කියලා
+      if (onGetStarted) {
+        onGetStarted();
+      }
     }
   };
 
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
   },
   activeDot: {
     backgroundColor: '#6366F1',
-    width: 20, // Active එකේ දිග වැඩියි පෙනුම ලස්සන වෙන්න
+    width: 20, 
   },
   button: {
     backgroundColor: '#6366F1',
